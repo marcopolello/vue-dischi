@@ -12,15 +12,27 @@
 
     <div id="app">
 
-      <div v-for="(disco, index) in listaDischi" class="disco">
+      <div id="cerca">
 
-        <img :src="listaDischi[index].poster" class=""></img>
-        <h3>{{listaDischi[index].title}}</h3>
-        <h5>{{listaDischi[index].author}}</h5>
-        <h5>{{listaDischi[index].year}}</h5>
-        <h5>{{listaDischi[index].genre}}</h5>
+        <input v-model="genere" @input="cercaGenere()" type="text" placeholder="Scrivi un Genere Musicale">
 
       </div>
+
+      <div class="container">
+
+        <div v-if="disco.visible" v-for="(disco, index) in listaDischi" class="disco">
+
+          <img :src="listaDischi[index].poster" class=""></img>
+          <h3>{{listaDischi[index].title}}</h3>
+          <h5>{{listaDischi[index].author}}</h5>
+          <h5>{{listaDischi[index].year}}</h5>
+          <h5>{{listaDischi[index].genre}}</h5>
+
+        </div>
+
+      </div>
+
+
 
     </div>
 
