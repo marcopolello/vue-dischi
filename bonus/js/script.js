@@ -31,7 +31,6 @@ var app = new Vue({
           item.visible = false;
         }
       });
-
     }
   }
 });
