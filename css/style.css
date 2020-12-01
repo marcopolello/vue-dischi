@@ -2,15 +2,29 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Exo 2', sans-serif;
+}
+body{
+  background-color: #1E2D3B;
 }
 #app{
+  margin: 10px 170px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  height: 100vh;
+  height: 1100px;
 }
 img{
-  width: 200px;
+  width: 150px;
   height: auto;
+}
+.disco{
+  margin: 0 20px;
+  background-color: #2E3A46;
+  width: 180px;
+  height: 300px;
+  padding: 15px;
+  text-align: center;
+  color: white;
 }
