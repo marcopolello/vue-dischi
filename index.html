@@ -12,8 +12,12 @@
     <div id="app">
 
       <div v-for="(disco, index) in listaDischi" class="disco">
+
         <img :src="listaDischi[index].poster" class=""></img>
-        <h3>{{listaDischi[index].title}}</h3>
+        <h2>{{listaDischi[index].title}}</h2>
+        <h6>{{listaDischi[index].author}}</h6>
+        <h6>{{listaDischi[index].year}}</h6>
+        <h6>{{listaDischi[index].genre}}</h6>
 
       </div>
 
