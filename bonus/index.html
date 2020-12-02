@@ -18,15 +18,29 @@
 
       </div>
 
+      <div class="selector">
+
+        <select v-model="genereSel" class="" name="selGenere">
+
+          <option value="All">All</option>
+          <option value="Rock">Rock</option>
+          <option value="Pop">Pop</option>
+          <option value="Jazz">Jazz</option>
+          <option value="Metal">Metal</option>
+
+        </select>
+
+      </div>
+
       <div class="container">
 
-        <div v-if="disco.visible" v-for="(disco, index) in listaDischi" class="disco">
+        <div v-if="disco.visible" v-for="(disco, index) in filtroGenere" class="disco">
 
-          <img :src="listaDischi[index].poster" :alt="listaDischi[index].author"></img>
-          <h3>{{listaDischi[index].title}}</h3>
-          <h5>{{listaDischi[index].author}}</h5>
-          <h5>{{listaDischi[index].year}}</h5>
-          <h5>{{listaDischi[index].genre}}</h5>
+          <img :src="filtroGenere[index].poster" :alt="filtroGenere[index].author"></img>
+          <h3>{{filtroGenere[index].title}}</h3>
+          <h5>{{filtroGenere[index].author}}</h5>
+          <h5>{{filtroGenere[index].year}}</h5>
+          <h5>{{filtroGenere[index].genre}}</h5>
 
         </div>
 

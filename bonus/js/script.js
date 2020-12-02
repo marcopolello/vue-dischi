@@ -3,6 +3,7 @@ var app = new Vue({
   data: {
     listaDischi: [],
     genere: '',
+    genereSel: '',
   },
   mounted: function () {
     axios.get('https://flynn.boolean.careers/exercises/api/array/music')
@@ -17,6 +18,17 @@ var app = new Vue({
       this.listaDischi = arrayDischi; //mi salvo direttamente tutti i dati ricevuti dalla chiamata
     });
   },
+  computed: {
+    filtroGenere: function () {
+      return this.listaDischi.filter((album) =>{
+        if (this.genereSel === "" || this.genereSel === "All") {
+          return this.listaDischi;
+        } else {
+          return album.genre === this.genereSel;
+        }
+      });
+    }
+  },
   methods:{
     cercaGenere() {
       this.listaDischi.visible = false;
@@ -29,6 +41,6 @@ var app = new Vue({
           item.visible = false;
         }
       });
-    }
+    },
   }
 });
