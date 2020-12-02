@@ -22,7 +22,7 @@
 
         <div v-if="disco.visible" v-for="(disco, index) in listaDischi" class="disco">
 
-          <img :src="listaDischi[index].poster" class=""></img>
+          <img :src="listaDischi[index].poster" :alt="listaDischi[index].author"></img>
           <h3>{{listaDischi[index].title}}</h3>
           <h5>{{listaDischi[index].author}}</h5>
           <h5>{{listaDischi[index].year}}</h5>
